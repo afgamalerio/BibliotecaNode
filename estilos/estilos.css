@@ -92,22 +92,22 @@ nav {
   .buscadorGrupo {
     width: 65%;
   }
-
+  
   .menuResponsive {
     display: block;
     margin: 5px;
   }
-
+  
   .fa-book {
     color: #fafafa;
     padding: 4px;
     font-size: 32px;
   }
-
+  
   .menu {
     display: none;
   }
-
+  
   .menuDesplegado {
     position: absolute;
     display: flex;
@@ -125,14 +125,18 @@ nav {
 
 /* Fin de estilos de navbar */
 
+section{
+  width: 100%;
+  padding: 20px;
+  max-width: 1272px;
+  margin: auto;
+}
+
 /* Fin de estilos de banner */
 
 .banner {
   display: flex;
   width: 100%;
-  max-width: 1272px;
-  margin: auto;
-  padding: 20px;
   justify-content: center;
   align-items: center;
 }
@@ -263,12 +267,14 @@ nav {
 }
 
 .informacion a {
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .informacion p {
+  height: 35%;
   font-size: 14px;
   text-align: justify;
+  overflow: hidden;
 }
 
 .informacion button {
@@ -280,10 +286,13 @@ nav {
 
 /*Sección de sobreNosotros*/
 
+.sobreNosotros{
+  padding-top: 60px;
+}
+
 .textoImg {
   display: flex;
-  align-items: center;
-  padding: 0 60px 0 60px;
+  justify-content: space-between;
 }
 
 .img {
@@ -291,19 +300,18 @@ nav {
 }
 
 .texto {
-  width: 35%;
-  padding: 27px;
-  text-align: left;
+  width: 37%;
+  text-align: justify;
   font-family: "Montserrat";
   font-size: larger;
 }
 
+/* .justificado_derecha {
+  text-align: right;
+} */
+
 /*Contacto*/
-.contacto {
-  width: 90%;
-  margin: 20px auto;
-  padding-top: 0 16px;
-}
+
 
 .contacto__main {
   display: grid;
@@ -358,8 +366,14 @@ nav {
   text-align: end;
 }
 
+.div1, .div2, .div5, .div7, .div8, .div9, .div11 {
+  display: flex;
+  align-items: center;
+}
+
 .formulario label {
   font-size: 14px;
+  width: 100%;
 }
 
 .formulario input[type="radio"],
@@ -373,6 +387,12 @@ nav {
   height: 1.4em;
 }
 
+.label_flex {
+  display: flex;
+  align-items: center;
+  gap: 2%;
+}
+
 input[type="radio"] + label .seleccionado,
 input[type="checkbox"] + label .seleccionado {
   display: none;
@@ -380,7 +400,9 @@ input[type="checkbox"] + label .seleccionado {
 
 input[type="radio"] + label .vacio,
 input[type="checkbox"] + label .vacio {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 3%;
 }
 
 input[type="radio"]:checked + label .vacio,
@@ -403,6 +425,7 @@ input[type="checkbox"]:checked + label .seleccionado {
 .contacto__contenido input,
 .contacto__contenido textarea {
   width: 100%;
+  height: 100%;
   font-size: 16px;
   resize: none;
 }
